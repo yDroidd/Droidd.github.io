@@ -1,0 +1,376 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+  }
+  
+  /* Container do menu */
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px 40px;
+  }
+  
+  /* Cada item do menu */
+  .menu-item {
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Imagens do menu */
+  .menu-item img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 5px;
+  }
+  
+  /* Alinhamentos específicos */
+  .esquerda {
+    text-align: left;
+  }
+  
+  .centro-esquerda {
+    text-align: left;
+  }
+  
+  .centro-direita {
+    text-align: right;
+  }
+  
+  .direita {
+    text-align: right;
+  }
+  .sobre-mim {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .sobre-mim-imagem {
+    margin-right: 40px; /* joga a imagem mais para a direita */
+  }
+  
+  .sobre-mim-imagem img {
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  .sobre-mim-texto {
+    flex: 1;
+    text-align: left;   /* força alinhamento do texto à esquerda */
+  }
+  
+  .sobre-mim-texto h2 {
+    margin: 0 0 45px 450px;
+    font-size: 24px;
+    color: #222;
+    text-align: left;   /* título alinhado à esquerda */
+  }
+  
+  .sobre-mim-texto p {
+    margin: 0 0 45px 300px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    text-align: left;   /* texto alinhado à esquerda */
+  }
+  .curtain {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: grid;
+    place-items: center;
+    z-index: 9999;
+    transition: opacity .6s ease;
+  }
+  .curtain.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .curtain-inner {
+    text-align: center;
+    color: #fff;
+    user-select: none;
+  }
+
+  /* Coração pulsando */
+  .heart {
+    width: 120px;
+    height: 120px;
+    display: inline-grid;
+    place-items: center;
+    filter: drop-shadow(0 0 20px rgba(255, 55, 95, .45));
+    margin-bottom: 16px;
+    animation: beat 1.2s infinite ease-in-out;
+  }
+  .heart::before {
+    content: "❤";
+    font-size: 96px;
+    line-height: 1;
+    color: var(--accent);
+  }
+  @keyframes beat {
+    0%, 20%, 40%, 60%, 80%, 100% { transform: scale(1); }
+    10%, 50%, 90% { transform: scale(1.15); }
+    30%, 70% { transform: scale(0.92); }
+  }
+
+  .enter-hint {
+    font-size: 14px;
+    opacity: .9;
+    letter-spacing: .3px;
+  }
+  .enter-hint kbd {
+    background: #111;
+    border: 1px solid #333;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+
+  /* ---------- CONTEÚDO DO SITE ---------- */
+  header {
+    padding: 24px clamp(16px, 5vw, 56px);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(24px, 2.5vw, 36px);
+    font-weight: 700;
+    letter-spacing: .3px;
+  }
+  .hero {
+    padding: 24px clamp(16px, 5vw, 56px) 56px;
+    max-width: 900px;
+  }
+  .card {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    backdrop-filter: blur(8px);
+  }
+  .card p {
+    margin: 0;
+    line-height: 1.6;
+    color: #e6e6e6;
+  }
+  .formacoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .formacoes-texto {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .formacoes-texto h2 {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    color: #222;
+  }
+  
+  .formacoes-texto p {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+  }
+  
+  .formacoes-imagem {
+    margin-left: 40px;
+  }
+  
+  .formacoes-imagem img {
+    width: 200px;
+    border-radius: 10px;
+  }
+  .objetivos {
+    padding: 40px;
+    margin-top: 20px;
+    background: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .objetivos h2 {
+    text-align: center;
+    margin-bottom: 40px; /* mais espaço abaixo do título */
+    font-size: 26px;
+    color: #222;
+  }
+  
+  .objetivo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 90px;  /* mais espaço entre os tópicos */
+    gap: 60px;            /* espaçamento entre texto e imagem */
+  }
+  
+  .objetivo:last-child {
+    margin-bottom: 0; /* remove espaço extra do último */
+  }
+  
+  .objetivo-texto {
+    flex: 1;
+    padding: 0 20px;
+  }
+  
+  .objetivo-texto h3 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .objetivo-texto p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+  }
+  s
+  .objetivo-imagem img {
+    width: 160px;
+    border-radius: 8px;
+  }
+  
+  /* Alternância */
+  .objetivo.esquerda {
+    flex-direction: row-reverse; /* imagem à esquerda, texto à direita */
+  }
+  
+  .objetivo.direita {
+    flex-direction: row-reverse; /* imagem à direita */
+  }
+
+  .projetos {
+    padding: 40px;
+    margin-top: 40px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .projetos h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 26px;
+    color: #222;
+  }
+  
+  .projeto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 30px;
+  }
+  
+  .projeto:last-child {
+    margin-bottom: 0;
+  }
+  
+  .projeto-imagem img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  
+  .projeto-texto {
+    flex: 1;
+  }
+  
+  .projeto-texto h3 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .projeto-texto p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Alternância */
+  .projeto.esquerda {
+    flex-direction: row-reverse; /* imagem à esquerda */
+  }
+  
+  .projeto.direita {
+    flex-direction: row-reverse; /* imagem à direita */
+  }
+  .contatos {
+    padding: 40px;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  .contatos h2 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    color: #222;
+  }
+  
+  .contatos p {
+    margin: 0 0 25px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .contatos-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .email {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .redes {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .redes img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .redes img:hover {
+    transform: scale(1.1);
+  }
+  
