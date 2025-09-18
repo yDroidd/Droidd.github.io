@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    background: #101010;
   }
   
   /* Container do menu */
@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #222;
+    background: #3d034b;
     padding: 15px 40px;
   }
   
@@ -53,38 +53,37 @@ body {
     display: flex;
     align-items: center;
     padding: 40px;
-    background: #fff;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #121212;
+    
   }
-  
+
   .sobre-mim-imagem {
-    margin-right: 40px; /* joga a imagem mais para a direita */
+    margin-left: 100px; /* joga a imagem mais para a direita */
   }
   
   .sobre-mim-imagem img {
-    width: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 10px;
   }
   
   .sobre-mim-texto {
     flex: 1;
-    text-align: left;   /* força alinhamento do texto à esquerda */
+  /*  text-align: left;   /* força alinhamento do texto à esquerda */
   }
   
   .sobre-mim-texto h2 {
     margin: 0 0 45px 450px;
     font-size: 24px;
-    color: #222;
+    color: #fffefe;
     text-align: left;   /* título alinhado à esquerda */
   }
   
   .sobre-mim-texto p {
-    margin: 0 0 45px 300px;
+    margin: 0 0 45px 50px;
     font-size: 16px;
     line-height: 1.6;
-    color: #444;
+    color: #ffffff;
     text-align: left;   /* texto alinhado à esquerda */
   }
   .curtain {
@@ -177,9 +176,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 40px;
-    margin-top: 20px;
-    background: #fff;
-    border-radius: 8px;
+    background: #121212;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
   
@@ -191,18 +188,18 @@ body {
   .formacoes-texto h2 {
     margin: 0 0 20px 0;
     font-size: 24px;
-    color: #222;
+    color: #ffffff;
   }
   
   .formacoes-texto p {
     margin: 8px 0;
     font-size: 16px;
     line-height: 1.5;
-    color: #444;
+    color: #fffbfb;
   }
   
   .formacoes-imagem {
-    margin-left: 40px;
+    margin-left: 20px;
   }
   
   .formacoes-imagem img {
@@ -212,16 +209,15 @@ body {
   .objetivos {
     padding: 40px;
     margin-top: 20px;
-    background: #fafafa;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #121212;
+    
   }
   
   .objetivos h2 {
     text-align: center;
     margin-bottom: 40px; /* mais espaço abaixo do título */
     font-size: 26px;
-    color: #222;
+    color: #ffffff;
   }
   
   .objetivo {
@@ -244,13 +240,13 @@ body {
   .objetivo-texto h3 {
     margin: 0 0 12px 0;
     font-size: 20px;
-    color: #333;
+    color: #ffffff;
   }
   
   .objetivo-texto p {
     font-size: 15px;
     line-height: 1.6;
-    color: #555;
+    color: #ffffff;
   }
   s
   .objetivo-imagem img {
@@ -270,9 +266,8 @@ body {
   .projetos {
     padding: 40px;
     margin-top: 40px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #121212;
+    
   }
   
   .projetos h2 {
